@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Справка по языку Python &#8212; one 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Справка по стандартной библиотеке Python" href="two.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="python">
+<h1>Справка по языку Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h1>
+<p>Данное справочное руководство описывает синтаксис и “основную семантику” языка. Оно краткое, но с претензией быть точным и полным. Семантика второстепенных встроенных объектных типов, а также встроенных функций и модулей описывается в Стандартной библиотеке Python. Для неформального введения в язык см. Учебник Python. Для программистов C или C++ существуют два дополнительных руководства: Расширение и встраивание интерпретатора Python (docs.python.org/3/extending/index.html) описывает высокоуровневую картину, как написать модуль расширения Python, а Справочное руководство по API Python/C (<a class="reference external" href="https://docs.python.org/3/c-api/index.html">https://docs.python.org/3/c-api/index.html</a>) описывает в деталях интерфейсы, доступные программистам C/C++.</p>
+<div class="section" id="id1">
+<h2>Введение<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Это справочное руководство описывает язык программирования Python. Его предназначение отличается от учебника.</p>
+<p>Хотя я стараюсь быть максимально точным, я решил использовать английский, а не формальные спецификации для всего, кроме синтаксиса и лексического анализа. Это должно сделать документ более понятным для обычных читателей, но оставит место для неоднозначности. Следовательно, если вы прибыли с Марса и пытались повторно реализовать Python только по этому документу, вам вероятно придется угадывать вещи, и в действительности вы возможно закончите реализацию совсем другим языком. С другой стороны, если вы используете Python и интересуетесь точными правилами в какой-то конкретной области языка, вам определенно следует искать их здесь. Если вам хочется увидеть больше формальных определений языка, может быть вы могли бы побыть волонтером в ваше время или изобрести машину для клонирования :-).</p>
+<p>Опасно добавлять слишком много деталей реализации в документ справки по языку - реализация может измениться, и другие реализации этого же языка могут работать по-другому. С другой стороны, CPython является единственной реализацией в широком использовании (хотя альтернативные реализации продолжают получать поддержку), и его конкретные особенности иногда стоит упомянуть, особенно там, где реализация налагает дополнительные ограничения. Поэтому вы обнаружите короткие “заметки реализации”, разбросанные среди текста.</p>
+<p>Каждая реализация Python приходит с рядом встроенных и стандартных модулей. Они документированы в Стандартной библиотеке Python. Несколько встроенных модулей упомянуты, когда они взаимодействуют в значительной степени с языковыми определениями.</p>
+</div>
+<div class="section" id="id2">
+<h2>Лексический анализ<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Программа на Python читается синтаксическим анализатором (parser). В парсер вводится поток символов (tokens), генерируемых лексическим анализатором (lexical analyzer). В этой главе описывается, как лексический анализатор разбивает файл на токены.</p>
+<p>Python читает текст программы как элементы кода Unicode; кодировка исходного файла может быть задана объявлением кодировки и по-умолчанию является UTF-8, детали см. PEP 3120 (www.python.org/dev/peps/pep-3120). Если файл исходного кода не может быть декодирован возникает ошибка SyntaxError (docs.python.org/3/library/exceptions.html#SyntaxError).</p>
+<p><a class="reference external" href="index.html">Вернуться к началу</a></p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">one</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Темы:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="one.html">Учебник питона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="two.html">Справка по стандартной библиотеке Python</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Справка по языку Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Введение</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Лексический анализ</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="two.html" title="previous chapter">Справка по стандартной библиотеке Python</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, lev.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/three.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
